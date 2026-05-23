@@ -166,9 +166,9 @@ export default function App() {
     const interval = setInterval(() => {
       setProgress((p) => {
         if (p >= 90) return p;
-        return Math.min(90, p + Math.max(0.4, (90 - p) * 0.05));
+        return Math.min(90, p + Math.max(0.1, (90 - p) * 0.01));
       });
-    }, 80);
+    }, 100);
     return () => clearInterval(interval);
   }, [loadingBlueprint]);
 
